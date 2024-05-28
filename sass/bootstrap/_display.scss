@@ -1,0 +1,69 @@
+$display-classes: (
+        "block": block,
+        "inline-block": inline-block,
+        "inline": inline,
+        "flex": flex,
+        "inline-flex": inline-flex,
+        "grid": grid,
+        "inline-grid": inline-grid,
+        "table": table,
+        "table-row": table-row,
+        "table-cell": table-cell,
+        "none": none
+);
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-flex-sm {
+  display: flex !important;
+  @include media-breakpoint-up(sm) {
+    display: flex !important;
+  }
+}
+
+.d-flex-xs {
+  @include make-display(flex, xs);
+}
+
+.d-flex-sm {
+  @include make-display(flex, sm);
+}
+
+.d-flex-md {
+  @include make-display(flex, md);
+}
+
+.d-flex-lg {
+  @include make-display(flex, lg);
+}
+
+.d-flex-xl {
+  @include make-display(flex, xl);
+}
+
+.d-flex-xxl {
+  @include make-display(flex, xxl);
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+$display-classes: map-merge($display-classes, (
+        "d-custom-flex": flex,
+        "d-custom-inline-flex": inline-flex
+));
